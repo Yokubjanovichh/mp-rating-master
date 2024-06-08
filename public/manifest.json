@@ -1,0 +1,41 @@
+{
+  "short_name": "MP Rating",
+  "name": "MP Rating",
+  "scope": "/",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#1E2227",
+  "background_color": "#90a4ae",
+
+  "icons": [
+    {
+      "src": "logo.png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "logo.png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo.png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "logo.png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "logo.png",
+      "sizes": "87x87"
+    },
+    {
+      "src": "logo.png",
+      "sizes": "72x72"
+    },
+
+    {
+      "src": "logo.png",
+      "sizes": "48x48"
+    }
+  ]
+}

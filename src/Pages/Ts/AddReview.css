@@ -1,0 +1,289 @@
+/* =================== modalbox =================== */
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999999999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(3px);
+}
+
+.modal-wrapper.active {
+  display: flex;
+}
+
+.modal-container {
+  position: relative;
+  max-width: 600px;
+  width: 100%;
+  border-radius: 8px;
+  background: #fff;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.modal-close_btn {
+  position: absolute;
+  top: 0;
+  right: 102%;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0px 12px 16px -4px rgba(0, 0, 0, 0.08);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+.modal-close_btn:active {
+  transform: scale(0.95);
+}
+
+/* =================== addreview ===================  */
+.addreview {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 25px;
+}
+
+.addreview__header {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.addreview__header > h2 {
+  color: #1a1a1a;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.addreview__header > div {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.addreview__header > div > figure {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.07s ease-in-out;
+}
+
+.addreview__header > div > figure > img {
+  width: 50px;
+  height: 55px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.addreview__header > div > figure > button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: transparent;
+  backdrop-filter: blur(5px);
+  padding: 3px;
+  border: none;
+  display: flex;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.addreview__box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.addreview__box > p {
+  width: 50%;
+  color: #1a1a1a;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.addreview__box__rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.addreview__box__rating input[type="radio"] {
+  display: none;
+}
+
+.addreview__box__rating svg {
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.addreview__box > :where(input, select) {
+  width: 50%;
+  border: 1px solid #f2f2f2;
+}
+
+.addreview__box > b {
+  width: 50%;
+  height: 35px;
+  background: #ffffff;
+  padding: 0 10px;
+  color: #1a1a1a;
+  font-size: 14px;
+  font-weight: 400;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+}
+
+.addreview__addcomment {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.addreview__addcomment > div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3px;
+}
+
+.addreview__addcomment > div span {
+  color: #1a1a1a;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.addreview__addcomment > div i {
+  color: #565555;
+  font-size: 14px;
+  font-style: normal;
+}
+
+.addreview__addcomment > textarea {
+  width: 100%;
+  height: 100px;
+  border: 1px solid #f2f2f2 !important;
+  padding: 10px;
+  resize: none;
+}
+
+.addreview__addphoto {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px 15px;
+}
+
+.addreview__addphoto > p {
+  inline-size: 100%;
+}
+
+.addreview__addphoto > label {
+  width: 54px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  border: 1px solid #f2f2f2;
+  cursor: pointer;
+}
+
+.addreview__addphoto > label input {
+  display: none;
+}
+
+.addreview__addphoto > label svg {
+  color: rgba(79, 79, 79, 0.634);
+  font-size: 24px;
+}
+
+.addreview__addphoto > label:active {
+  background: #f2f2f2;
+}
+
+.addreview__addphoto__info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.addreview__addphoto__info p {
+  color: #1a1a1a;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.addreview__addphoto__info span {
+  color: #1a1a1a;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.addreview__price {
+  width: 152px;
+  height: 72px;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  background: #2e7b60;
+}
+
+.addreview__price > p {
+  position: relative;
+}
+
+.addreview__price > p span {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.addreview__price > p i {
+  position: absolute;
+  top: 2px;
+  right: -10px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.addreview__price > span {
+  color: #fff;
+  font-size: 12px;
+}
+
+.addreview > button[type="submit"] {
+  width: 100%;
+  height: 40px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  background: #f9f9f9;
+  cursor: pointer;
+  font-size: 14px;
+}

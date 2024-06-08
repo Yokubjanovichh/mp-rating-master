@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./icon.svg" type="image/png" />
+    <link rel="manifest" href="manifest.json" />
+    <title>MP Rating</title>
+    <meta
+      name="description"
+      content="MP Rating, created by Oybek Abdujabborov using React.js"
+    />
+    <meta name="theme-color" content="#fff" />
+    <meta name="keywords" content="MP, Rating, MP Rating" />
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("./worker.js").then(
+        function (registration) {},
+        function (error) {
+          console.log("Service worker registration failed:", error);
+        }
+      );
+    } else {
+      console.log("Service workers are not supported.");
+    }
+
+    (function () {
+      var info = console.info;
+      console.info = function (message) {
+        if (!/Download the React DevTools/.test(message))
+          info.apply(console, arguments);
+      };
+    })();
+  </script>
+</html>

@@ -1,0 +1,149 @@
+.modal-container.video_review__modal-container {
+  padding: 0;
+}
+
+.video_review {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.video_review__title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 30px 20px;
+  border-bottom: 2px solid #e6e6e6;
+}
+
+:where(.video_review__body, .photo_review__body) {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 50px;
+  padding: 20px 30px;
+  --active-tab: 0;
+  overflow: hidden;
+}
+
+:where(.video_review_box, .photo_review_box) {
+  min-width: 100%;
+  transform: translateX(calc(var(--active-tab) * -110%));
+  transition: transform 0.3s ease-in-out;
+}
+
+:where(.video_review_box, .photo_review_box) > :where(video, img) {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border: none;
+}
+
+.video_review__btn {
+  width: 100%;
+  padding: 20px 30px;
+  display: flex;
+  gap: 5px;
+  border-top: 2px solid #e6e6e6;
+}
+
+.video_review__btn > button {
+  width: calc((100% - 5px) / 2);
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  border: none;
+  background: #fff;
+  gap: 5px;
+  border: 1px solid #e5e7eb;
+  color: #2e7b60;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.video_review__btn > button:hover {
+  border: 1px solid #565555;
+}
+
+.video_review__btn > :first-child:hover {
+  color: #cb111c;
+}
+
+.video_review__btn > :last-child:hover {
+  color: #2e7b60;
+}
+
+/* ========== video_review_cancel ======== */
+.video_review_cancel {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.video_review_cancel > div {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.video_review_cancel > div > label {
+  width: calc((100% - 20px) / 2);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.video_review_cancel > div > label input {
+  width: 20px;
+  height: 20px;
+}
+
+.video_review_cancel > div > label input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  cursor: pointer;
+}
+
+.video_review_cancel > div > label span {
+  color: #1a1a1a;
+  font-size: 16px;
+}
+
+.video_review_cancel > label {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.video_review_cancel > label > div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.video_review_cancel > label span {
+  color: #1a1a1a;
+  font-size: 14px;
+}
+
+.video_review_cancel > label textarea {
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #eee;
+  background: #fff;
+  padding: 10px;
+  resize: none;
+}

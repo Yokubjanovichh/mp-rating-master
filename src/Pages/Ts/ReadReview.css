@@ -1,0 +1,74 @@
+.readreview {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.readreview_header {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.readreview_header > h3 {
+  color: #000;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.readreview_header > figure {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.readreview_header > figure img {
+  width: 50px;
+  height: 55px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.readreview_box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.readreview_box > p {
+  width: 50%;
+  color: #1a1a1a;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.readreview_star {
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.readreview_star svg {
+  font-size: 24px;
+  fill: #ffcc00;
+}
+
+.readreview_box_comment {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.readreview_box_comment b {
+  color: #1a1a1a;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.readreview_box_comment p {
+  color: #1a1a1a;
+  font-size: 14px;
+  font-weight: 400;
+}

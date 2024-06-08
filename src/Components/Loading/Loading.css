@@ -1,0 +1,69 @@
+.loading-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999999;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  display: none;
+}
+
+.loading-box.active {
+  display: flex;
+}
+
+.circle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #333;
+  right: 100%;
+  animation-name: circle;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
+}
+
+/* 15 itsm circle */
+.circle:nth-child(1) {
+  animation-delay: 0s;
+}
+.circle:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.circle:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.circle:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.circle:nth-child(5) {
+  animation-delay: 0.4s;
+}
+.circle:nth-child(6) {
+  animation-delay: 0.5s;
+}
+.circle:nth-child(7) {
+  animation-delay: 0.6s;
+}
+.circle:nth-child(8) {
+  animation-delay: 0.7s;
+}
+.circle:nth-child(9) {
+  animation-delay: 0.8s;
+}
+.circle:nth-child(10) {
+  animation-delay: 0.9s;
+}
+
+@keyframes circle {
+  from {
+    right: 100;
+  }
+  to {
+    right: -30px;
+    opacity: 9;
+  }
+}

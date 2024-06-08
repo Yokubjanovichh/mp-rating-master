@@ -1,0 +1,93 @@
+.table-wrapper {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 10px;
+}
+
+.table-wrapper > .table-root {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-wrapper > .table-root > thead {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 999;
+}
+
+.table-wrapper > .table-root tr {
+  border-bottom: 0.07rem solid #e5e7eb;
+}
+
+.table-wrapper > .table-root tr a {
+  text-decoration-line: underline;
+  color: #1a1a1a;
+}
+
+.table-wrapper > .table-root :where(thead, tbody) > tr > td {
+  padding: 8px 15px;
+}
+
+.table-wrapper > .table-root :where(thead, tbody) > tr > th {
+  text-align: left;
+  color: #1a1a1a;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 16px;
+}
+
+.table-wrapper > .table-root > :where(thead, tbody) > tr > :first-child {
+  background: #f9f9f9;
+}
+
+.table-wrapper > .table-root > thead {
+  border-bottom: 0.1rem solid #e5e7eb;
+}
+
+.table-wrapper > .table-root > tbody > tr > td {
+  color: #1a1a1a;
+  font-size: 14px;
+  font-weight: 400;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 140px;
+}
+
+.table-wrapper > .table-root > tbody > tr:hover * {
+  background: #f2f2f2 !important;
+}
+
+.table-wrapper > .table-root .table__date {
+  width: 180px;
+}
+
+.table-wrapper > .table-root .table__del {
+  width: 50px;
+  text-align: center;
+}
+
+.table-wrapper > .table-root .table__del > button {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #bdbcdb;
+  font-size: 20px;
+  display: flex;
+}
+
+.table-wrapper > .table-root .table-btn {
+  text-decoration-line: underline;
+  cursor: pointer;
+}
+
+.table-wrapper > .table-root .table-btn:hover {
+  color: #2e7b60;
+}
+
+.table-wrapper > .table-root .table-btn:active {
+  color: #565555;
+}
